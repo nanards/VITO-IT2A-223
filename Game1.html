@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bullet Heaven</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="icon" href="/img/gamepad.png">
+
+</head>
+
+<body>
+    <nav>
+        <div class="left-wrap">
+            <a class="link" href="Homepage.html">XD Games <img src="img/gamepad.png" alt="XD"style="width:16px;height:16px" ;></a>
+            <div class="row">
+                <input type="search" placeholder="Search Games" autocomplete="off" id="search" onchange="openPage()">
+            </div>
+        </div>
+        <div class="right-wrap">
+            <a class="link" href="PublishGames.html">Publish Games <img src="img/folder-upload.png" alt="DX" style="width:16px;height:16px" ;></a>
+            <a class="link" href="About.html">About <img src="img/info.png" alt="i" style="width:16px;height:16px";></a>
+        </div>
+    </nav>
+
+    <script src="../js/openPage.js">
+    </script>
+
+    <div class="box">
+        <div>
+            <div class="gamedet">
+                <h1>Bullet Heaven</h1>
+                <p> Made by: KairuDx
+                    <br> Description: A not finished bullet heaven game. 
+                    <br> Currently WIP. Enjoy the BGM and some shooting!
+                    <br>
+                    <br> How to play?
+                    <br> W: Move Up, S: Move Down, A: Move Left, D: Move Right. J: Shoot
+                </p>
+            </div>
+
+            <div>
+                <canvas id="game1"></canvas>
+                <script src="../js/Game1.js" type="module"></script>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">&copy;<span> XD Games Ver.1.0.0. All rights reserved. <a href="About.html">About Us</span>
+        <div class="icons">
+            <a href="mailto:aljiekylevito@gmail.com" id="ic2"><span>Gmail</span></a>
+            <a href="https://github.com/KairuDX" id="ic2"><span>Github</span></a>
+            <a href="https://web.facebook.com/profile.php?id=100005601944764" id="ic2"><span>Facebook</span></a>
+            <p>------Contact us------</p>
+        </div>
+    </div>
+</body>
+
+</html>

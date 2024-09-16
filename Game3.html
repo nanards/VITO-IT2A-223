@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breaker Ball</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="icon" href="/img/gamepad.png">
+
+</head>
+
+<body>
+    <nav>
+        <div class="left-wrap">
+            <a class="link" href="Homepage.html">XD Games <img src="img/gamepad.png" alt="XD" style="width:16px;height:16px" ;></a>
+            <div class="row">
+                <input type="search" placeholder="Search Games" autocomplete="off" id="search" onchange="openPage()">
+            </div>
+        </div>
+        <div class="right-wrap">
+            <a class="link" href="PublishGames.html">Publish Games <img src="img/folder-upload.png" alt="DX" style="width:16px;height:16px" ;></a>
+            <a class="link" href="About.html">About <img src="img/info.png" alt="i" style="width:16px;height:16px";></a>
+        </div>
+    </nav>
+
+    <script src="../js/openPage.js">
+    </script>
+
+    <div class="box">
+        <div>
+            <div class="gamedet">
+                <h1>Breaker Ball</h1>
+                <p> Made by: Arun-Labana
+                    <br> Description: Classic Breaker Ball
+                    <br> Break all walls to win and
+                    <br> Don't let the ball fall!
+                    <br>
+                    <br> How to play?
+                    <br> KeyLeft: Move Left, KeyRight: Move Right
+                </p>
+            </div>
+
+        <div id="gameover">
+            <img src="img/youwon.png" alt="" id="youwon">
+            <img src="img/gameover.png" alt="" id="youlose">
+            <div id="restart">Play Again!</div>
+            <div id="score-card"></div>
+        </div>
+
+        <canvas id="breakout" width="400" height="500"></canvas>
+        <script src='/js3/components.js'></script>
+        <script src='/js3/game.js'></script>
+        
+    </div>
+
+    <div class="footer">&copy;<span> XD Games Ver.1.0.0. All rights reserved. <a href="About.html">About Us</span>
+        <div class="icons">
+            <a href="mailto:aljiekylevito@gmail.com" id="ic2"><span>Gmail</span></a>
+            <a href="https://github.com/KairuDX" id="ic2"><span>Github</span></a>
+            <a href="https://web.facebook.com/profile.php?id=100005601944764" id="ic2"><span>Facebook</span></a>
+            <p>------Contact us------</p>
+        </div>
+</body>
+
+</html>

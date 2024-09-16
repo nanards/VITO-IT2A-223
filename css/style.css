@@ -1,0 +1,566 @@
+@font-face {
+    font-family:"Roboto Mono";
+    src: url("/css/ttf/RobotoMono-Italic-VariableFont_wght.ttf") format("truetype");
+    src: url("/css/ttf//RobotoMono-VariableFont_wght.ttf") format("truetype");
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: "Roboto Mono", monospace, sans-serif;
+}
+
+nav {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333333;
+    overflow: auto;
+    height: 40px;
+    z-index: 999;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    background-image: url(/img/backgrounds.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+/* nav */
+
+li {
+    display: list-item;
+    list-style: none;
+}
+
+.left-wrap {
+    flex: 1 1 200px;
+}
+
+.link {
+    margin-top: 4.8px;
+    margin-left: 1px;
+    border-radius: 5px;
+    background-color: gray;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    display: block;
+    float: left;
+    transition: all ease-in-out .2s;
+}
+
+.link:hover {
+    border: none;
+    border-bottom: 0px solid #FFFFFF;
+}
+
+.link::after {
+    content: '';
+    position: absolute;
+    width: 0px;
+    height: 5px;
+    left: 50%;
+    bottom: 0;
+    background-color: white;
+    transition: all ease-in-out .2s;
+}
+
+.link:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+#link2 {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#link2:hover {
+    text-decoration: underline;
+}
+
+/* box for homepages and games */
+
+.box {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin: 8% auto;
+    width: 72%;
+    height: 100%;
+    background: linear-gradient(0deg, black, #272727);
+    justify-content: space-evenly;
+}
+
+.box:before,
+.box:after {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094,
+            #0000ff, #00ff00, #ffff00, #ff0000);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: -1;
+}
+
+.box:after {
+    filter: blur(10px);
+}
+
+/* smaller boxes for game displays and blanks */
+
+.smallbox {
+    display: inline-block;
+    position: relative;
+    width: 250px;
+    height: 125px;
+    margin: 5px;
+    opacity: 95%;
+    background: repeating-linear-gradient(-45deg, black, black 20px, grey 20px, grey 40px);
+    border: 2px solid transparent;
+    border-color: black;
+}
+
+.smallbox:hover {
+    border: 2px solid transparent;
+    border-color: white;
+    animation: border-pulse 0.5s infinite alternate;
+}
+
+.smallboxG2 {
+    display: inline-block;
+    position: relative;
+    width: 250px;
+    height: 125px;
+    margin: 5px;
+    opacity: 95%;
+    background-image: url(/img/bgimg.png);
+    background-size: cover;
+    background-position: 50;
+    border: 2px solid transparent;
+    border-color: black;
+}
+
+.smallboxG2:hover {
+    background-image: url(/img/bg.gif);
+    background-size: cover;
+    background-position: left;
+    border: 2px solid transparent;
+    border-color: white;
+    animation: border-pulse 0.5s infinite alternate;
+}
+
+.smallboxG3 {
+    display: inline-block;
+    position: relative;
+    width: 250px;
+    height: 125px;
+    margin: 5px;
+    opacity: 95%;
+    background-image: url(/img/bhbgpic.png);
+    background-size: cover;
+    background-position: center;
+    border: 2px solid transparent;
+    border-color: black;
+}
+
+.smallboxG3:hover {
+    background-image: url(/img/bhbg.gif);
+    background-size: cover;
+    background-position: left;
+    border: 2px solid transparent;
+    border-color: white;
+    animation: border-pulse 0.5s infinite alternate;
+}
+
+.smallboxG4 {
+    display: inline-block;
+    position: relative;
+    width: 250px;
+    height: 125px;
+    margin: 5px;
+    opacity: 95%;
+    background-image: url(/img/daa.png);
+    background-size: cover;
+    background-position: top;
+    border: 2px solid transparent;
+    border-color: black;
+}
+
+.smallboxG4:hover {
+    background-image: url(/img/bGG.gif);
+    background-size: cover;
+    background-position: left;
+    border: 2px solid transparent;
+    border-color: white;
+    animation: border-pulse 0.5s infinite alternate;
+}
+
+@keyframes border-pulse {
+    from {
+        border-color: #333333;
+    }
+
+    to {
+        border-color: #FFFFFF;
+    }
+}
+
+.smallbox a {
+    text-decoration: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.smallboxG2 a {
+    text-decoration: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.smallboxG3 a {
+    text-decoration: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.smallboxG4 a {
+    text-decoration: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* secondary box and small box for other html's */
+
+.smallbox2 {
+    background-color: gray;
+    border-radius: 5px;
+
+}
+
+.box2 {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#h12 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#p1 {
+    line-height: 1.6;
+}
+
+/* searchbar */
+
+.row {
+    margin-top: 4.8px;
+    width: 220px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+
+#search {
+    margin-left: 3px;
+    height: 20px;
+    background: transparent;
+    border: 0;
+    font-size: 15px;
+    color: #333;
+}
+
+#bc {
+    color: #555;
+    align-items: bottom;
+}
+
+::placeholder {
+    color: #555;
+}
+
+/* developer and game details */
+
+.dev-det {
+    margin-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 20px;
+    font-size: 0.9em;
+}
+
+
+.gamedet {
+    text-align: center;
+}
+
+/* icons for social media links */
+
+#ic {
+    color: #fff;
+    background: gray;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    padding-top: 12px;
+    margin: 0 2px;
+    -o-transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all .5s;
+    -webkit-font-smoothing: antialiased;
+}
+
+#ic:hover {
+    background: lightgray;
+}
+
+#ic span {
+    color: #667;
+    position: absolute;
+    font-family: sans-serif;
+    bottom: 0;
+    left: -25px;
+    right: -25px;
+    padding: 5px 7px;
+    z-index: -1;
+    font-size: 14px;
+    border-radius: 2px;
+    background: #fff;
+    visibility: hidden;
+    opacity: 0;
+    -o-transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -webkit-transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -moz-transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    z-index: 10;
+}
+
+#ic span:before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #fff;
+    position: absolute;
+    bottom: -5px;
+    left: 40px;
+    z-index: 10;
+}
+
+#ic:hover span {
+    bottom: 80px;
+    visibility: visible;
+    opacity: 1;
+}
+
+#ic2 {
+    color: #fff;
+    background: gray;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    padding-top: 12px;
+    margin: 0 2px;
+    -o-transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all .5s;
+    -webkit-font-smoothing: antialiased;
+}
+
+#ic2:hover {
+    background: lightgray;
+}
+
+#ic2 span {
+    color: #667;
+    position: absolute;
+    font-family: sans-serif;
+    bottom: 0;
+    left: -25px;
+    right: -25px;
+    padding: 5px 7px;
+    z-index: -1;
+    font-size: 14px;
+    border-radius: 2px;
+    background: #fff;
+    visibility: hidden;
+    opacity: 0;
+    -o-transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -webkit-transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -moz-transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    z-index: 10;
+}
+
+#ic2 span:before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #fff;
+    position: absolute;
+    bottom: -5px;
+    left: 40px;
+    z-index: 10;
+}
+
+#ic2:hover span {
+    bottom: 80px;
+    visibility: visible;
+    opacity: 1;
+}
+
+#ic:nth-of-type(1):before {
+    content: url(/img/envelope.png);
+}
+
+#ic:nth-of-type(2):before {
+    content: url(/img/github.png);
+}
+
+#ic:nth-of-type(3):before {
+    content: url(/img/facebook.png);
+}
+
+#ic2:nth-of-type(2):before {
+    content: url(/img/envelope.png);
+}
+
+#ic2:nth-of-type(3):before {
+    content: url(/img/github.png);
+}
+
+#ic2:nth-of-type(4):before {
+    content: url(/img/facebook.png);
+}
+
+.icons {
+    float: right;
+}
+
+/* footer */
+
+.footer {
+    position: absolute;
+    width: 100%;
+    height: 160px;
+    bottom: -40%;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    background: #333;
+    color: white;
+    font-weight: 500;
+    justify-content: center;
+    align-items: center;
+  }
+
+/* breaker ball design */
+
+#sound{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 465px;
+    left: 15px;
+}
+#gameover{
+    position: absolute;
+    width: 400px;
+    height: 500px;
+    background: rgba(0, 0,0, 0.5);
+    display: none;
+}
+#youwon{
+    width: 100px;
+    position: absolute;
+    top: 200px;
+    left: 150px;
+    display: none;
+}
+#youlose{
+    width: 400px;
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    display: none;
+}
+@keyframes largerSmall {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.2);
+    }
+}
+#restart{
+    position: absolute;
+    top: 310px;
+    left: 155px;
+    cursor: pointer;
+    font-size: 1.25em;
+    color: #fff;
+    animation: largerSmall 1s ease-in-out infinite alternate;
+}
+#score-card{
+    position: absolute;
+    top: 380px;
+    left: 140px;
+    font-size: 1.25em;
+    color: #fff;
+}
